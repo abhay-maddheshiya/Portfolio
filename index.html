@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Abhay Maddheshiya - BTech Student | Software Developer | Problem Solver. Premium portfolio showcasing modern web development projects and technical expertise.">
+  <meta name="keywords" content="Abhay Maddheshiya, portfolio, software developer, web developer, BTech, projects, resume">
+  <meta name="author" content="Abhay Maddheshiya">
+  <title>Abhay Maddheshiya | Premium Portfolio</title>
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Abhay Maddheshiya | Portfolio">
+  <meta property="og:description" content="BTech Student | Software Developer | Problem Solver">
+  <meta property="og:type" content="website">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-theme="light">
+  
+  <!-- Loading Screen -->
+  <div id="loader" class="loader">
+    <div class="loader-content">
+      <div class="loader-circle"></div>
+      <p>Portfolio Loading...</p>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <header class="navbar" id="navbar">
+    <nav class="nav-container">
+      <div class="nav-brand">
+        <a href="#home" class="logo">
+          <span class="logo-mark">AM</span>
+        </a>
+      </div>
+      
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="#home" class="nav-link">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#resume" class="nav-link">Resume</a></li>
+        <li><a href="#feedback" class="nav-link">Feedback</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      
+      <div class="nav-actions">
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+          <i class="fas fa-moon"></i>
+        </button>
+        <button id="mobile-toggle" class="mobile-toggle" aria-label="Toggle menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span>🚀 Welcome</span>
+        </div>
+        <h1 class="hero-title">
+          Hi, I'm <span class="gradient-text">Abhay Maddheshiya</span>
+        </h1>
+        <p class="hero-subtitle">
+          BTech Student | Software Developer | Problem Solver
+        </p>
+        <p class="hero-description">
+          Passionate about crafting innovative solutions through clean code and modern technologies. 
+          I love turning complex problems into elegant user experiences.
+        </p>
+        <div class="hero-buttons">
+          <a href="#projects" class="btn btn-primary btn-large">
+            <span>View Projects</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
+          <a href="#resume" class="btn btn-secondary btn-large">
+            <span>Download Resume</span>
+            <i class="fas fa-download"></i>
+          </a>
+        </div>
+      </div>
+      
+      <div class="hero-image">
+        <div class="profile-image">
+          <img src="images/profile.jpg" alt="Abhay Maddheshiya - Software Developer" loading="lazy">
+        </div>
+        <div class="profile-ring"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section about">
+    <div class="container">
+      <h2 class="section-title">About Me</h2>
+      
+      <div class="about-grid">
+        <div class="about-text">
+          <p class="about-summary">
+            I'm a dedicated Software Developer currently pursuing BTech with a strong foundation 
+            in modern web technologies, data structures, and problem-solving. I thrive on 
+            building scalable applications and delivering exceptional user experiences.
+          </p>
+          
+          <div class="career-objective">
+            <h3>Career Objective</h3>
+            <p>Seeking a challenging position to utilize my technical skills and contribute to innovative projects while continuously growing as a developer.</p>
+          </div>
+        </div>
+        
+        <div class="skills-section">
+          <h3>Technical Skills</h3>
+          <div class="skills-grid">
+            <div class="skill-item">
+              <span>JavaScript</span>
+              <div class="skill-bar">
+                <div class="skill-progress" data-width="95"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <span>React</span>
+              <div class="skill-bar">
+                <div class="skill-progress" data-width="88"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <span>Node.js</span>
+              <div class="skill-bar">
+                <div class="skill-progress" data-width="85"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <span>C++</span>
+              <div class="skill-bar">
+                <div class="skill-progress" data-width="90"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <span>Python</span>
+              <div class="skill-bar">
+                <div class="skill-progress" data-width="82"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <span>Database</span>
+              <div class="skill-bar">
+                <div class="skill-progress" data-width="78"></div>
+              </div>
+            </div>
+          </div>
+          
+          <h3 class="soft-skills-title">Soft Skills</h3>
+          <div class="soft-skills">
+            <span class="skill-tag">Problem Solving</span>
+            <span class="skill-tag">Team Collaboration</span>
+            <span class="skill-tag">Communication</span>
+            <span class="skill-tag">Time Management</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience" class="section experience">
+    <div class="container">
+      <h2 class="section-title">Experience</h2>
+      
+      <div class="timeline">
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-date">Jan 2025 - Present</div>
+            <h3>Web Development Intern</h3>
+            <h4>TechSolutions Pvt Ltd</h4>
+            <ul>
+              <li>Developed responsive web applications using React and Node.js</li>
+              <li>Implemented RESTful APIs and database optimization</li>
+              <li>Collaborated with design team for pixel-perfect UI implementation</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-date">Jun 2024 - Dec 2024</div>
+            <h3>Software Development Trainee</h3>
+            <h4>CodeCraft Academy</h4>
+            <ul>
+              <li>Mastered Data Structures & Algorithms implementation</li>
+              <li>Built full-stack applications with modern frameworks</li>
+              <li>Participated in competitive programming challenges</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-date">Mar 2024 - May 2024</div>
+            <h3>IoT Project Developer</h3>
+            <h4>University Research Lab</h4>
+            <ul>
+              <li>Designed and implemented IoT monitoring system</li>
+              <li>Developed real-time data visualization dashboard</li>
+              <li>Integrated hardware sensors with cloud services</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="section projects">
+    <div class="container">
+      <h2 class="section-title">Featured Projects</h2>
+      
+      <div class="projects-grid">
+        <div class="project-card reveal">
+          <div class="project-image">
+            <img src="images/project1.jpg" alt="E-Commerce Platform" loading="lazy">
+            <div class="project-overlay">
+              <div class="project-links">
+                <a href="#" class="project-link" aria-label="View Live Demo">
+                  <i class="fas fa-external-link-alt"></i>
+                </a>
+                <a href="#" class="project-link" aria-label="View GitHub">
+                  <i class="fab fa-github"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3>E-Commerce Platform</h3>
+            <p>Full-stack e-commerce solution with payment integration, admin dashboard, and advanced search functionality.</p>
+            <div class="project-tech">
+              <span>React</span>
+              <span>Node.js</span>
+              <span>MongoDB</span>
+              <span>Tailwind</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="project-card reveal">
+          <div class="project-image">
+            <img src="images/project2.jpg" alt="Task Management App" loading="lazy">
+            <div class="project-overlay">
+              <div class="project-links">
+                <a href="#" class="project-link" aria-label="View Live Demo">
+                  <i class="fas fa-external-link-alt"></i>
+                </a>
+                <a href="#" class="project-link" aria-label="View GitHub">
+                  <i class="fab fa-github"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3>Task Management App</h3>
+            <p>Collaborative task manager with real-time updates, drag & drop interface, and team collaboration features.</p>
+            <div class="project-tech">
+              <span>Next.js</span>
+              <span>Socket.io</span>
+              <span>PostgreSQL</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="project-card reveal">
+          <div class="project-image">
+            <img src="images/project3.jpg" alt="IoT Dashboard" loading="lazy">
+            <div class="project-overlay">
+              <div class="project-links">
+                <a href="#" class="project-link" aria-label="View Live Demo">
+                  <i class="fas fa-external-link-alt"></i>
+                </a>
+                <a href="#" class="project-link" aria-label="View GitHub">
+                  <i class="fab fa-github"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3>IoT Monitoring Dashboard</h3>
+            <p>Real-time IoT data visualization platform with predictive analytics and alert system.</p>
+            <div class="project-tech">
+              <span>Vue.js</span>
+              <span>Python</span>
+              <span>MQTT</span>
+              <span>Chart.js</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Resume Section -->
+  <section id="resume" class="section resume">
+    <div class="container">
+      <h2 class="section-title">Resume</h2>
+      
+      <div class="resume-content">
+        <div class="resume-preview">
+          <iframe src="resume.pdf" title="Resume Preview" frameborder="0"></iframe>
+        </div>
+        <div class="resume-actions">
+          <a href="resume.pdf" class="btn btn-primary btn-large" download>
+            <i class="fas fa-download"></i>
+            Download Resume (PDF)
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Feedback Section -->
+  <section id="feedback" class="section feedback">
+    <div class="container">
+      <h2 class="section-title">Feedback & Testimonials</h2>
+      
+      <div class="feedback-grid">
+        <div class="feedback-form">
+          <h3>Leave Feedback</h3>
+          <form id="feedbackForm" class="feedback-form">
+            <div class="form-group">
+              <label for="feedbackName">Name</label>
+              <input type="text" id="feedbackName" name="name" required>
+            </div>
+            <div class="form-group">
+              <label for="feedbackEmail">Email</label>
+              <input type="email" id="feedbackEmail" name="email" required>
+            </div>
+            <div class="form-group">
+              <label>Rating</label>
+              <div class="star-rating" id="starRating">
+                <i class="fas fa-star" data-rating="1"></i>
+                <i class="fas fa-star" data-rating="2"></i>
+                <i class="fas fa-star" data-rating="3"></i>
+                <i class="fas fa-star" data-rating="4"></i>
+                <i class="fas fa-star" data-rating="5"></i>
+              </div>
+              <input type="hidden" id="ratingValue" name="rating" value="0">
+            </div>
+            <div class="form-group">
+              <label for="feedbackMessage">Message</label>
+              <textarea id="feedbackMessage" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit Feedback</button>
+          </form>
+        </div>
+        
+        <div class="testimonials">
+          <div class="testimonial-card">
+            <div class="testimonial-rating">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p>"Outstanding work! Abhay delivered exceptional quality and exceeded all expectations."</p>
+            <div class="testimonial-author">
+              <img src="https://i.pravatar.cc/40" alt="John Doe">
+              <div>
+                <h4>John Doe</h4>
+                <span>Tech Lead @ TechSolutions</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="testimonial-card">
+            <div class="testimonial-rating">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+            </div>
+            <p>"Excellent problem-solving skills and great communication. Highly recommended!"</p>
+            <div class="testimonial-author">
+              <img src="https://i.pravatar.cc/40" alt="Jane Smith">
+              <div>
+                <h4>Jane Smith</h4>
+                <span>Project Manager</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section contact">
+    <div class="container">
+      <h2 class="section-title">Get In Touch</h2>
+      
+      <div class="contact-content">
+        <div class="contact-info">
+          <div class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <div>
+              <h3>Email</h3>
+              <a href="mailto:abhay@example.com">abhay@example.com</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-phone"></i>
+            <div>
+              <h3>Phone</h3>
+              <a href="tel:+919876543210">+91 98765 43210</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <div>
+              <h3>Location</h3>
+              <p>Delhi, India</p>
+            </div>
+          </div>
+        </div>
+        
+        <form id="contactForm" class="contact-form">
+          <div class="form-group">
+            <label for="contactName">Name</label>
+            <input type="text" id="contactName" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="contactEmail">Email</label>
+            <input type="email" id="contactEmail" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="contactSubject">Subject</label>
+            <input type="text" id="contactSubject" name="subject" required>
+          </div>
+          <div class="form-group">
+            <label for="contactMessage">Message</label>
+            <textarea id="contactMessage" name="message" rows="6" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-large">Send Message</button>
+        </form>
+      </div>
+      
+      <div class="social-links">
+        <a href="#" class="social-link" aria-label="LinkedIn">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="#" class="social-link" aria-label="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="#" class="social-link" aria-label="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="#" class="social-link" aria-label="Twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <a href="#home" class="logo">
+            <span class="logo-mark">AM</span>
+          </a>
+          <p>&copy; 2026 Abhay Maddheshiya. All rights reserved.</p>
+        </div>
+        
+        <div class="footer-links">
+          <a href="#home">Home</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </div>
+        
+        <div class="footer-social">
+          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+      
+      <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+      </button>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
