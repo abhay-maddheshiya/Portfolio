@@ -104,7 +104,7 @@ body {
 }
 
 .navbar.scrolled {
-  background: rgba(255, 255, 255, 0.98);
+  background: rgba(71, 101, 132, 0.95);
   box-shadow: var(--shadow-md);
 }
 
@@ -337,26 +337,25 @@ body {
 }
 
 .profile-image {
-  position: relative;
+    width: clamp(200px, 35vw, 400px);
+    aspect-ratio: 1 / 1;   /* Keeps perfect square */
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto;
+    box-shadow: 0 0 40px rgba(139, 92, 246, 0.4);
 }
 
 .profile-image img {
-  width: 100%;
-  height: 400px;
-  object-fit: cover;
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-xl);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    transition: transform 0.4s ease;
 }
 
-.profile-ring {
-  position: absolute;
-  top: -20px;
-  right: -20px;
-  width: 80px;
-  height: 80px;
-  border: 3px solid var(--accent-primary);
-  border-radius: 50%;
-  opacity: 0.3;
+.profile-image:hover img {
+    transform: scale(1.08);
 }
 
 /* Sections */
@@ -681,11 +680,12 @@ body {
   font-weight: 500;
 }
 
+
 /* Resume */
 .resume-content {
   display: grid;
   grid-template-columns: 2fr 1fr;
-  gap: 3rem;
+  gap: 5rem;
   align-items: start;
 }
 
@@ -701,18 +701,6 @@ body {
   width: 100%;
   height: 100%;
   border: none;
-}
-
-/* Feedback */
-.feedback-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3rem;
-}
-
-.feedback-form h3 {
-  margin-bottom: 2rem;
-  color: var(--text-primary);
 }
 
 .form-group {

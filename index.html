@@ -6,8 +6,8 @@
   <meta name="description" content="Abhay Maddheshiya - BTech Student | Software Developer | Problem Solver. Premium portfolio showcasing modern web development projects and technical expertise.">
   <meta name="keywords" content="Abhay Maddheshiya, portfolio, software developer, web developer, BTech, projects, resume">
   <meta name="author" content="Abhay Maddheshiya">
-  <title>Abhay Maddheshiya | Premium Portfolio</title>
-  
+  <title>Abhay Maddheshiya | Portfolio</title>
+
   <!-- Open Graph -->
   <meta property="og:title" content="Abhay Maddheshiya | Portfolio">
   <meta property="og:description" content="BTech Student | Software Developer | Problem Solver">
@@ -29,12 +29,12 @@
 <body data-theme="light">
   
   <!-- Loading Screen -->
-  <div id="loader" class="loader">
+  <!-- <div id="loader" class="loader">
     <div class="loader-content">
       <div class="loader-circle"></div>
       <p>Portfolio Loading...</p>
     </div>
-  </div>
+  </div> -->
 
   <!-- Navigation -->
   <header class="navbar" id="navbar">
@@ -51,7 +51,6 @@
         <li><a href="#experience" class="nav-link">Experience</a></li>
         <li><a href="#projects" class="nav-link">Projects</a></li>
         <li><a href="#resume" class="nav-link">Resume</a></li>
-        <li><a href="#feedback" class="nav-link">Feedback</a></li>
         <li><a href="#contact" class="nav-link">Contact</a></li>
       </ul>
       
@@ -97,13 +96,13 @@
       
       <div class="hero-image">
         <div class="profile-image">
-          <img src="images/profile.jpg" alt="Abhay Maddheshiya - Software Developer" loading="lazy">
+          <img src="image/photo.jpg" alt="Abhay Maddheshiya - Software Developer" loading="lazy">
         </div>
-        <div class="profile-ring"></div>
+        <!-- <div class="profile-ring"></div> -->
       </div>
     </div>
   </section>
-
+<hr>
   <!-- About Section -->
   <section id="about" class="section about">
     <div class="container">
@@ -120,6 +119,14 @@
           <div class="career-objective">
             <h3>Career Objective</h3>
             <p>Seeking a challenging position to utilize my technical skills and contribute to innovative projects while continuously growing as a developer.</p>
+          </div>
+
+          <h3 class="soft-skills-title">Soft Skills</h3>
+          <div class="soft-skills">
+            <span class="skill-tag">Problem Solving</span>
+            <span class="skill-tag">Team Collaboration</span>
+            <span class="skill-tag">Communication</span>
+            <span class="skill-tag">Time Management</span>
           </div>
         </div>
         
@@ -163,19 +170,11 @@
               </div>
             </div>
           </div>
-          
-          <h3 class="soft-skills-title">Soft Skills</h3>
-          <div class="soft-skills">
-            <span class="skill-tag">Problem Solving</span>
-            <span class="skill-tag">Team Collaboration</span>
-            <span class="skill-tag">Communication</span>
-            <span class="skill-tag">Time Management</span>
-          </div>
         </div>
       </div>
     </div>
   </section>
-
+<hr class="section-divider">
   <!-- Experience Section -->
   <section id="experience" class="section experience">
     <div class="container">
@@ -226,22 +225,22 @@
       </div>
     </div>
   </section>
-
+<hr>
   <!-- Projects Section -->
   <section id="projects" class="section projects">
     <div class="container">
-      <h2 class="section-title">Featured Projects</h2>
+      <h2 class="section-title">Projects</h2>
       
       <div class="projects-grid">
         <div class="project-card reveal">
           <div class="project-image">
-            <img src="images/project1.jpg" alt="E-Commerce Platform" loading="lazy">
+            <img src="image/e_commerce.jpg" alt="E-Commerce Platform">
             <div class="project-overlay">
               <div class="project-links">
-                <a href="#" class="project-link" aria-label="View Live Demo">
+                <a href="https://abhay-maddheshiya.github.io/Amazon-Clone/" class="project-link" aria-label="View Live Demo">
                   <i class="fas fa-external-link-alt"></i>
                 </a>
-                <a href="#" class="project-link" aria-label="View GitHub">
+                <a href="https://github.com/abhay-maddheshiya/Amazon-Clone" class="project-link" aria-label="View GitHub">
                   <i class="fab fa-github"></i>
                 </a>
               </div>
@@ -312,7 +311,7 @@
       </div>
     </div>
   </section>
-
+<hr>
   <!-- Resume Section -->
   <section id="resume" class="section resume">
     <div class="container">
@@ -331,80 +330,11 @@
       </div>
     </div>
   </section>
-
-  <!-- Feedback Section -->
-  <section id="feedback" class="section feedback">
-    <div class="container">
-      <h2 class="section-title">Feedback & Testimonials</h2>
-      
-      <div class="feedback-grid">
-        <div class="feedback-form">
-          <h3>Leave Feedback</h3>
-          <form id="feedbackForm" class="feedback-form">
-            <div class="form-group">
-              <label for="feedbackName">Name</label>
-              <input type="text" id="feedbackName" name="name" required>
-            </div>
-            <div class="form-group">
-              <label for="feedbackEmail">Email</label>
-              <input type="email" id="feedbackEmail" name="email" required>
-            </div>
-            <div class="form-group">
-              <label>Rating</label>
-              <div class="star-rating" id="starRating">
-                <i class="fas fa-star" data-rating="1"></i>
-                <i class="fas fa-star" data-rating="2"></i>
-                <i class="fas fa-star" data-rating="3"></i>
-                <i class="fas fa-star" data-rating="4"></i>
-                <i class="fas fa-star" data-rating="5"></i>
-              </div>
-              <input type="hidden" id="ratingValue" name="rating" value="0">
-            </div>
-            <div class="form-group">
-              <label for="feedbackMessage">Message</label>
-              <textarea id="feedbackMessage" name="message" rows="5" required></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary">Submit Feedback</button>
-          </form>
-        </div>
-        
-        <div class="testimonials">
-          <div class="testimonial-card">
-            <div class="testimonial-rating">
-              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-            </div>
-            <p>"Outstanding work! Abhay delivered exceptional quality and exceeded all expectations."</p>
-            <div class="testimonial-author">
-              <img src="https://i.pravatar.cc/40" alt="John Doe">
-              <div>
-                <h4>John Doe</h4>
-                <span>Tech Lead @ TechSolutions</span>
-              </div>
-            </div>
-          </div>
-          
-          <div class="testimonial-card">
-            <div class="testimonial-rating">
-              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-            </div>
-            <p>"Excellent problem-solving skills and great communication. Highly recommended!"</p>
-            <div class="testimonial-author">
-              <img src="https://i.pravatar.cc/40" alt="Jane Smith">
-              <div>
-                <h4>Jane Smith</h4>
-                <span>Project Manager</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
+<hr>
   <!-- Contact Section -->
   <section id="contact" class="section contact">
     <div class="container">
-      <h2 class="section-title">Get In Touch</h2>
+      <h2 class="section-title">Contact Me</h2>
       
       <div class="contact-content">
         <div class="contact-info">
@@ -412,14 +342,14 @@
             <i class="fas fa-envelope"></i>
             <div>
               <h3>Email</h3>
-              <a href="mailto:abhay@example.com">abhay@example.com</a>
+              <a href="mailto:abhaymaddheshiya159@gmail.com">abhaymaddheshiya159@gmail.com</a>
             </div>
           </div>
           <div class="contact-item">
             <i class="fas fa-phone"></i>
             <div>
               <h3>Phone</h3>
-              <a href="tel:+919876543210">+91 98765 43210</a>
+              <a href="tel:+919044361455">+91 9044361455</a>
             </div>
           </div>
           <div class="contact-item">
@@ -453,22 +383,22 @@
       </div>
       
       <div class="social-links">
-        <a href="#" class="social-link" aria-label="LinkedIn">
+        <a href="https://www.linkedin.com/in/abhay-maddheshiya-138b92327/" class="social-link" aria-label="LinkedIn">
           <i class="fab fa-linkedin-in"></i>
         </a>
-        <a href="#" class="social-link" aria-label="GitHub">
+        <a href="https://github.com/abhay-maddheshiya" class="social-link" aria-label="GitHub">
           <i class="fab fa-github"></i>
         </a>
-        <a href="#" class="social-link" aria-label="Instagram">
+        <a href="https://www.instagram.com/abhay_maddy_/" class="social-link" aria-label="Instagram">
           <i class="fab fa-instagram"></i>
         </a>
-        <a href="#" class="social-link" aria-label="Twitter">
+        <a href="https://x.com/Abhay_Maddy_" class="social-link" aria-label="Twitter">
           <i class="fab fa-twitter"></i>
         </a>
       </div>
     </div>
   </section>
-
+<hr>
   <!-- Footer -->
   <footer class="footer">
     <div class="container">
@@ -487,9 +417,9 @@
         </div>
         
         <div class="footer-social">
-          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-          <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
-          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/in/abhay-maddheshiya-138b92327/" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://github.com/abhay-maddheshiya" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://www.instagram.com/abhay_maddy_/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
         </div>
       </div>
       
@@ -500,5 +430,15 @@
   </footer>
 
   <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+<script>
+   (function(){
+      emailjs.init("YOUR_PUBLIC_KEY");
+   })();
+</script>
+
+<script src="script.js"></script>
+
 </body>
 </html>

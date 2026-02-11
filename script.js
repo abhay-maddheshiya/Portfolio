@@ -1,5 +1,5 @@
 /**
- * Premium Portfolio - Main JavaScript
+ * Portfolio - Main JavaScript
  * Handles all interactive features, animations, and functionality
  */
 
@@ -125,6 +125,7 @@ class PortfolioApp {
     }
   }
 
+  
   // Scroll reveal animations
   handleScrollAnimations() {
     const observerOptions = {
@@ -213,35 +214,6 @@ class PortfolioApp {
     });
   }
 
-  // Form handling with validation
-  handleForms() {
-    // Contact form
-    const contactForm = document.getElementById('contactForm');
-    contactForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      if (this.validateForm(contactForm)) {
-        // Simulate form submission
-        alert('Thank you! Your message has been sent successfully. 🚀');
-        contactForm.reset();
-      }
-    });
-    
-    // Feedback form
-    const feedbackForm = document.getElementById('feedbackForm');
-    feedbackForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      if (this.validateForm(feedbackForm)) {
-        alert('Thank you for your feedback! ⭐');
-        feedbackForm.reset();
-        document.getElementById('ratingValue').value = '0';
-        document.querySelectorAll('#starRating i').forEach(star => {
-          star.classList.remove('active');
-          star.style.color = '#d1d5db';
-        });
-      }
-    });
-  }
-
   validateForm(form) {
     let isValid = true;
     const inputs = form.querySelectorAll('input[required], textarea[required]');
@@ -292,6 +264,34 @@ class PortfolioApp {
 // Initialize app when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
   new PortfolioApp();
+});
+
+// sending email using emailjs
+document.getElementById("contactForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const btn = this.querySelector("button");
+    btn.innerText = "Sending...";
+    btn.disabled = true;
+
+    const params = {
+        name: document.getElementById("contactName").value,
+        email: document.getElementById("contactEmail").value,
+        subject: document.getElementById("contactSubject").value,
+        message: document.getElementById("contactMessage").value
+    };
+
+    emailjs.send("service_btsef1k", "Gmail", params)
+        .then(function(response) {
+            alert("Message Sent Successfully ✅ I will contact you soon.");
+            document.getElementById("contactForm").reset();
+        }, function(error) {
+            alert("Message Failed ❌ Please try again.");
+        })
+        .finally(() => {
+            btn.innerText = "Send Message";
+            btn.disabled = false;
+        });
 });
 
 // Smooth scroll for anchor links
