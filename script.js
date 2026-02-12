@@ -266,32 +266,44 @@ document.addEventListener('DOMContentLoaded', () => {
   new PortfolioApp();
 });
 
-// sending email using emailjs
-document.getElementById("contactForm").addEventListener("submit", function(e) {
-    e.preventDefault();
+// Contact form submission
+document.getElementById("contactForm").addEventListener("submit", async function (e) {
+  e.preventDefault();
 
-    const btn = this.querySelector("button");
-    btn.innerText = "Sending...";
-    btn.disabled = true;
+  const btn = this.querySelector("button");
+  btn.innerText = "Sending...";
+  btn.disabled = true;
 
-    const params = {
-        name: document.getElementById("contactName").value,
-        email: document.getElementById("contactEmail").value,
-        subject: document.getElementById("contactSubject").value,
-        message: document.getElementById("contactMessage").value
-    };
+  const formData = {
+    name: document.getElementById("contactName").value,
+    email: document.getElementById("contactEmail").value,
+    subject: document.getElementById("contactSubject").value,
+    message: document.getElementById("contactMessage").value,
+  };
 
-    emailjs.send("service_btsef1k", "Gmail", params)
-        .then(function(response) {
-            alert("Message Sent Successfully ✅ I will contact you soon.");
-            document.getElementById("contactForm").reset();
-        }, function(error) {
-            alert("Message Failed ❌ Please try again.");
-        })
-        .finally(() => {
-            btn.innerText = "Send Message";
-            btn.disabled = false;
-        });
+  try {
+    const response = await fetch("http://localhost:5000/send", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    });
+
+    const result = await response.json();
+
+    if (result.success) {
+      alert("Message Sent Successfully ✅");
+      this.reset();
+    } else {
+      alert("Message Failed ❌");
+    }
+  } catch (error) {
+    alert("Server Error ❌");
+  }
+
+  btn.innerText = "Send Message";
+  btn.disabled = false;
 });
 
 // Smooth scroll for anchor links
