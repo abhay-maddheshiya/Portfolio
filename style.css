@@ -871,7 +871,7 @@ body {
   background: var(--accent-primary);
   border: none;
   border-radius: 50%;
-  color: rgb(249, 249, 249);
+  color: rgb(248, 243, 243);
   font-size: 1.2rem;
   cursor: pointer;
   opacity: 0;
