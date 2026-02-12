@@ -860,6 +860,9 @@ body {
 }
 
 .back-to-top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: fixed;
   bottom: 2rem;
   right: 2rem;
@@ -868,7 +871,7 @@ body {
   background: var(--accent-primary);
   border: none;
   border-radius: 50%;
-  color: white;
+  color: rgb(249, 249, 249);
   font-size: 1.2rem;
   cursor: pointer;
   opacity: 0;
@@ -876,7 +879,10 @@ body {
   transition: var(--transition);
   z-index: 1000;
 }
-
+.back-to-top i {
+  margin-top: 1rem;
+  animation: float 2s ease-in-out infinite;
+}
 .back-to-top.show {
   opacity: 1;
   visibility: visible;
