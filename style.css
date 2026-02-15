@@ -584,7 +584,7 @@ body {
 .project-link {
   width: 56px;
   height: 56px;
-  background: rgb(32, 39, 50);
+  background: rgb(138, 148, 156);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -622,7 +622,7 @@ body {
 }
 
 .project-tech span {
-  background: rgba(59, 130, 246, 0.2);
+  background: rgb(19, 124, 228);
   color: var(--accent-primary);
   padding: 0.25rem 0.75rem;
   border-radius: 20px;
