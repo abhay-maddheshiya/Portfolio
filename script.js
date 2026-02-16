@@ -15,7 +15,7 @@ class PortfolioApp {
     this.handleBackToTop();
     this.handleSkillBars();
     this.handleStarRating();
-    this.handleForms();
+    this.handleForms();   // ✅ now works
     this.handleLoading();
     this.updateActiveNav();
   }
@@ -27,11 +27,9 @@ class PortfolioApp {
 
   handleLoading() {
     const loader = document.getElementById('loader');
-    if (!loader) return;
-
     window.addEventListener('load', () => {
       setTimeout(() => {
-        loader.classList.add('hidden');
+        if (loader) loader.classList.add('hidden');
       }, 800);
     });
   }
@@ -42,8 +40,7 @@ class PortfolioApp {
 
     const html = document.documentElement;
 
-    const savedTheme =
-      localStorage.getItem('theme') ||
+    const savedTheme = localStorage.getItem('theme') ||
       (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
 
     html.setAttribute('data-theme', savedTheme);
@@ -65,7 +62,6 @@ class PortfolioApp {
   handleMobileMenu() {
     const toggle = document.getElementById('mobile-toggle');
     const menu = document.getElementById('nav-menu');
-
     if (!toggle || !menu) return;
 
     toggle.addEventListener('click', () => {
@@ -98,10 +94,8 @@ class PortfolioApp {
     const navLinks = document.querySelectorAll('.nav-link');
 
     let current = '';
-
     sections.forEach(section => {
-      const sectionTop = section.offsetTop;
-      if (window.scrollY >= sectionTop - 200) {
+      if (window.scrollY >= (section.offsetTop - 200)) {
         current = section.getAttribute('id');
       }
     });
@@ -156,7 +150,6 @@ class PortfolioApp {
   handleStarRating() {
     const stars = document.querySelectorAll('#starRating i');
     const ratingInput = document.getElementById('ratingValue');
-
     if (!stars.length || !ratingInput) return;
 
     stars.forEach(star => {
@@ -165,35 +158,32 @@ class PortfolioApp {
         ratingInput.value = rating;
 
         stars.forEach((s, index) => {
-          s.classList.toggle('active', index < rating);
+          if (index < rating) s.classList.add('active');
+          else s.classList.remove('active');
         });
       });
     });
   }
 
+  // ✅ FIXED CONTACT FORM (INSIDE CLASS)
   handleForms() {
     const form = document.getElementById("contactForm");
     if (!form) return;
 
     form.addEventListener("submit", async (e) => {
-      e.preventDefault();
-
-      const btn = form.querySelector("button");
-      btn.innerText = "Sending...";
-      btn.disabled = true;
+      e.preventDefault();   // prevents page refresh
 
       const formData = {
         name: document.getElementById("contactName").value,
         email: document.getElementById("contactEmail").value,
-        message: document.getElementById("contactMessage").value
+        subject: document.getElementById("contactSubject").value,
+        message: document.getElementById("contactMessage").value,
       };
 
       try {
-        const response = await fetch("http://localhost:5000/send", {
+        const response = await fetch("https://portfolio-qtln.onrender.com/send", {
           method: "POST",
-          headers: {
-            "Content-Type": "application/json"
-          },
+          headers: { "Content-Type": "application/json" },
           body: JSON.stringify(formData)
         });
 
@@ -210,17 +200,14 @@ class PortfolioApp {
         alert("Server Error ❌");
         console.error(error);
       }
-
-      btn.innerText = "Send Message";
-      btn.disabled = false;
     });
   }
 
   throttle(func, limit) {
     let inThrottle;
-    return function () {
+    return function (...args) {
       if (!inThrottle) {
-        func.apply(this, arguments);
+        func.apply(this, args);
         inThrottle = true;
         setTimeout(() => inThrottle = false, limit);
       }
@@ -235,11 +222,20 @@ class PortfolioApp {
     };
   }
 
-  handleResize() {
-    // optional
-  }
+  handleResize() {}
 }
 
+// Initialize
 document.addEventListener('DOMContentLoaded', () => {
   new PortfolioApp();
+});
+
+// Smooth scroll
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    document.querySelector(this.getAttribute('href'))?.scrollIntoView({
+      behavior: 'smooth'
+    });
+  });
 });
