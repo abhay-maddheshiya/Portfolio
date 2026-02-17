@@ -173,6 +173,10 @@ class PortfolioApp {
     form.addEventListener("submit", async (e) => {
       e.preventDefault();   // prevents page refresh
 
+      const submitBtn = form.querySelector("button[type='submit']");
+      submitBtn.disabled = true;
+      submitBtn.innerText = "Sending...";
+
       const formData = {
         name: document.getElementById("contactName").value,
         email: document.getElementById("contactEmail").value,
@@ -181,7 +185,14 @@ class PortfolioApp {
       };
 
       try {
-        const response = await fetch("https://portfolio-qtln.onrender.com/send", {
+        const API_URL =
+          window.location.hostname === "localhost" ||
+          window.location.hostname === "127.0.0.1"
+            ? "http://localhost:5000/send"
+            : "https://portfolio-qtln.onrender.com/send";
+
+        const response = await fetch(API_URL, {
+
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(formData)
@@ -200,6 +211,10 @@ class PortfolioApp {
         alert("Server Error ❌");
         console.error(error);
       }
+        // 🔥 Reset button
+    submitBtn.disabled = false;
+    submitBtn.innerText = "Send Message";
+
     });
   }
 
