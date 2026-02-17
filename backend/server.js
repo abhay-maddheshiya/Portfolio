@@ -1,7 +1,7 @@
+const cors = require("cors");
 require("dotenv").config();
 const express = require("express");
 const nodemailer = require("nodemailer");
-const cors = require("cors");
 
 const app = express();
 app.use(cors());
