@@ -126,7 +126,7 @@ class PortfolioApp {
     const btn = document.getElementById('back-to-top');
     if (!btn) return;
 
-    if (window.scrollY > 500) {
+    if (window.scrollY > 300) {
       btn.classList.add('show');
     } else {
       btn.classList.remove('show');
