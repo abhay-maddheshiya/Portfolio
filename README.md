@@ -1,4 +1,5 @@
-# 🚀 Abhay Maddheshiya – Developer Portfolio
+# 🚀 Abhay Maddheshiya  Portfolio
+
 <img width="50" height="50" alt="image" src="https://github.com/user-attachments/assets/5a8c0f93-51e3-4535-981f-5798572d4b91" />
 
 <img width="50" height="50" alt="image" src="https://github.com/user-attachments/assets/7c7f406e-3a71-4e6c-b936-1f22468e8e5f" />
