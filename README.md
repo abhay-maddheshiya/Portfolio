@@ -8,11 +8,9 @@
 
 <img src="https://github.com/user-attachments/assets/981d0ea1-7145-485a-9ddd-d29f158a1749" width="200" />
 
-<img src="https://github.com/user-attachments/assets/3ae86745-da20-498b-9e80-60c247bcc592" width="200" />
+<img src="https://github.com/user-attachments/assets/3ae86745-da20-498b-9e80-60c247bcc592" hight="80" />
 
-<img src="https://github.com/user-attachments/assets/8e9df930-012b-4f23-a158-884ca3e02f8e" widht="200" />
-
----
+<img src="https://github.com/user-attachments/assets/8e9df930-012b-4f23-a158-884ca3e02f8e" hight="80" />
 
 🌐 **Live Website:** 
 <a href="https://abhay-maddy.github.io/Portfolio/" style="margin-top:20px;">Visit Portfolio</a>
