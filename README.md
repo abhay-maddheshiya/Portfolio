@@ -165,7 +165,7 @@ Or simply open `index.html` in browser.
 
 * 📧 Email: [abhaymaddheshiya159@gmail.com](mailto:abhaymaddheshiya159@gmail.com)
 * 📍 Location: Delhi, India
-* 💻 GitHub: [https://github.com/abhay-maddheshiya](https://github.com/abhay-maddheshiya)
+* 💻 GitHub: [https://github.com/Abhay-Maddy/](https://github.com/Abhay-Maddy/)
 
 ---
 
