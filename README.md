@@ -112,7 +112,14 @@ Portfolio/
 ├── style.css
 ├── script.js
 ├── images/
-├── resume.pdf
+    ├── e_commerce.jpg
+    ├──favicon.png
+    ├──IOTmonitoring.png
+    ├──photo.JPG
+    ├──resume.jpg
+    ├──resume.pdf
+    ├──TaskManagerApp.jpg
+├── favicon.png
 └── README.md
 ```
 
