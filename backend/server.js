@@ -10,11 +10,14 @@ app.use(express.json());
 app.post("/send", async (req, res) => {
   const { name, email, message } = req.body;
 
+  // ✅ Basic validation (IMPORTANT)
+  if (!name || !email || !message) {
+    return res.status(400).json({ success: false, error: "All fields required" });
+  }
+
   try {
     const transporter = nodemailer.createTransport({
-      host: "smtp.gmail.com",
-      port: 465,
-      secure: true,
+      service: "gmail",
       auth: {
         user: process.env.EMAIL,
         pass: process.env.PASSWORD
@@ -35,13 +38,17 @@ Message: ${message}
 
     await transporter.sendMail(mailOptions);
 
-    console.log("Email sent successfully");
+    console.log("✅ Email sent successfully");
 
     res.status(200).json({ success: true });
 
   } catch (error) {
-    console.log("MAIL ERROR:", error);
-    res.status(500).json({ success: false });
+    console.error("❌ MAIL ERROR:", error.message);
+
+    res.status(500).json({
+      success: false,
+      error: error.message
+    });
   }
 });
 
